@@ -67,7 +67,7 @@ class Registration : AppCompatActivity() {
         val currentUser = auth.currentUser
         if (currentUser != null) {
             Toast.makeText(this, "Already SignIn: Redirecting to home page", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, TimeTrackerActivity::class.java)
             startActivity(intent)
             finish()
         }

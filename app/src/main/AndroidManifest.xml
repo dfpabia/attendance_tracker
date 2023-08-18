@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".TimeTrackerActivity"
             android:theme="@style/Theme.Material3.Light.NoActionBar"
             android:exported="true">
 

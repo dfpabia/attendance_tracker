@@ -1,26 +1,22 @@
 package com.example.attendancetracker
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.widget.Button
 import android.widget.TextClock
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
 
-class MainActivity : AppCompatActivity() {
+class TimeTrackerActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var digitalClock: TextClock
     private val handler = Handler()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_time_tracker)
         digitalClock = findViewById(R.id.digitalClock)
 
         // Start updating the clock
