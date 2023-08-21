@@ -1,8 +1,11 @@
 package com.example.attendancetracker
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextClock
 import com.google.firebase.auth.FirebaseAuth
 import java.text.SimpleDateFormat
@@ -21,15 +24,13 @@ class TimeTrackerActivity : AppCompatActivity() {
 
         // Start updating the clock
         handler.post(updateClockRunnable)
-//        val btnLogout = findViewById<Button>(R.id.btnLogout)
-//        btnLogout.setOnClickListener{
 //
-//            Firebase.auth.signOut()
-//
-//            val intent = Intent(this, Login::class.java)
-//            startActivity(intent)
-//            finish()
-//        }
+        val btnBack = findViewById<ImageView>(R.id.btn_back)
+        btnBack.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
     private val updateClockRunnable = object : Runnable {
         override fun run() {
